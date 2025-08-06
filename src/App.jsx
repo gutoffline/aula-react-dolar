@@ -1,6 +1,12 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 import './App.css'
 import Titulo from './Titulo';
+import Rodape from './Rodape';
+import Menu from './Menu';
+import CalcDollar from './CalcDollar';
+import Banner from './Banner';
 
 function App() {
 
@@ -8,7 +14,11 @@ function App() {
     <>
       <div className='container'>
         <Titulo />
+        <Menu />
+        <Banner />
+        <CalcDollar />
       </div>
+      <Rodape />
     </>
   )
 }
