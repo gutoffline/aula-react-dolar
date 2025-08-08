@@ -1,26 +1,24 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css'
-import Titulo from './Titulo';
-import Rodape from './Rodape';
-import Menu from './Menu';
-import CalcDollar from './CalcDollar';
-import Banner from './Banner';
+import Layout from "./pages/Layout.jsx";
+import Home from "./pages/Home";
+import Sobre from "./pages/Sobre";
+import NoPage from "./pages/NoPage";
 
-function App() {
 
+export default function App() {
   return (
-    <>
-      <div className='container'>
-        <Titulo />
-        <Menu />
-        <Banner />
-        <CalcDollar />
-      </div>
-      <Rodape />
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="contact" element={<Sobre />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
