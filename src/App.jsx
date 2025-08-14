@@ -9,16 +9,18 @@ import Sobre from "./pages/Sobre";
 import NoPage from "./pages/NoPage";
 
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="contact" element={<Sobre />} />
+          <Route path="sobre" element={<Sobre />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
+
+export default App

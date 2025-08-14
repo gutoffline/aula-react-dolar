@@ -18,6 +18,8 @@ function Menu() {
                             <a className="nav-link" href="/">
                                 Calculadora de Dólar
                             </a>
+                        </li>
+                         <li className="nav-item">
                             <a className="nav-link" href="/sobre">
                                 Sobre
                             </a>
